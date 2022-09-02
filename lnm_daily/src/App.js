@@ -1,10 +1,37 @@
-import FeedPage from "./Pages/Feed Page/FeedPage.js";
+import FeedPage from "./Pages/Feed Page/FeedPage";
+import Parent from "./Pages/Parent/Parent";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <FeedPage />
-    </div>
+    <BrowserRouter>
+
+      <Routes>
+        <Route path="/" element={<Parent/>}>
+            <Route index element={<FeedPage/>}></Route>
+        </Route>
+        <Route path='*' element={<div><h1>Error!</h1>Change URL to /</div>}/>
+      </Routes>
+
+
+      
+      <div style={{backgroundColor:'#4d94ff', borderTop:'0.25rem black solid'}}>
+        <div>
+          <h4>Rights Reserved ® <br/>
+          ..<br/>
+          Created by</h4>
+          Nirnay(@nirnaykorde)<br/>
+          Pranav(@pranavchatur)<br/>
+          Raghav(@raghavkhanna)<br/>
+          Sourav(@souravjan)<br/>
+          ..<br/>
+          <h4>Made using React, Material UI, CassandraDB, NodeJS</h4>
+          <hr/>
+          <hr/>
+        </div>
+      </div>
+
+    </BrowserRouter>
   );
 }
 
