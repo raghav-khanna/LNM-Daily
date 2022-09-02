@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.parent_feedpage {
+    background-color: #e6ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    min-width: fit-content;
+}
+
+.carousel_n_clubs {
+    display: flex;
+    align-items: stretch;
+    /* border: 0.25rem solid black; */
+    margin: 1rem;
+}
+
+.temp{
+    background-color: lightyellow;
+    width: 15rem;
+    margin: 1rem;
+    border: 0.25rem solid black;
+}
+
+.inline_events{
+    display: flex;
+    justify-content: space-around;
+}
