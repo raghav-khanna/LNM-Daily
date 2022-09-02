@@ -1,4 +1,4 @@
-import FeedPage from "./Pages/FeedPage";
+import FeedPage from "./Pages/Feed Page/FeedPage.js";
 
 function App() {
   return (
