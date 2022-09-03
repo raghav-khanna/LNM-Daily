@@ -1,7 +1,7 @@
 import FeedPage from "./Pages/Feed Page/FeedPage";
 import Parent from "./Pages/Parent/Parent";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AddPost from "./Pages/Add Post/AddPost";
+import Clubs from "./Pages/Clubs/Clubs";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Parent />}>
           <Route index element={<FeedPage />}></Route>
-          {/* <Route path="addpost" element={<AddPost />}></Route> */}
+          <Route path="clubs" element={<Clubs />}></Route>
         </Route>
         <Route
           path="*"
@@ -22,7 +22,7 @@ function App() {
       </Routes>
 
       <div
-        style={{ backgroundColor: "#4d94ff", borderTop: "0.25rem black solid" }}
+        style={{ backgroundColor: "#2196f3", borderTop: "0.25rem black solid" }}
       >
         <div>
           <h4>

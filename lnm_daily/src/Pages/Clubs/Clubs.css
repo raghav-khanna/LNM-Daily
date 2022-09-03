@@ -1,0 +1,16 @@
+.parent_clubs{
+    background-color: #e6ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    min-width: fit-content;
+}
+
+.content_clubs{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    border: 0.25rem black solid;
+}
