@@ -30,7 +30,7 @@ const FeedPage = () => {
         <div className="carousel">
           <Carousel imageList={images} customWidth={800}/>
           </div>
-        <div className="temp"></div>
+        {/*<div className="temp"></div>*/}
       </div>
 
       <div className="inline_events">
