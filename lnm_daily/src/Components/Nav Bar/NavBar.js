@@ -11,16 +11,16 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import FeedIcon from '@mui/icons-material/Feed';
 import { useNavigate } from "react-router-dom";
+import ForestIcon from '@mui/icons-material/Forest';
 
 const NavBar = () => {
 
     const navigate = useNavigate();
 
-    const pages = ['News', 'Events', 'Clubs'];
-    const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+    const pages = ['Events', 'Clubs', 'Chat'];
+    const settings = ['Profile', 'Create a Post', 'Logout'];
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -38,6 +38,10 @@ const NavBar = () => {
 
     const handleClubsNavMenu = () => {
         navigate('clubs');
+    }
+
+    const handleCreatePost = () => {
+        navigate('new_post');
     }
 
     const handleCloseUserMenu = () => {
@@ -64,7 +68,7 @@ const NavBar = () => {
                         textDecoration: 'none',
                         }}
                     >
-                        <FeedIcon/>
+                        <ForestIcon/>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -103,7 +107,7 @@ const NavBar = () => {
                         ))}
                         </Menu>
                     </Box>
-                    <FeedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <ForestIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
@@ -114,7 +118,7 @@ const NavBar = () => {
                         display: { xs: 'flex', md: 'none' },
                         flexGrow: 1,
                         fontFamily: 'monospace',
-                        fontWeight: 700,
+                        fontWeight: 300,
                         letterSpacing: '.3rem',
                         color: 'inherit',
                         textDecoration: 'none',
@@ -158,7 +162,7 @@ const NavBar = () => {
                         onClose={handleCloseUserMenu}
                         >
                         {settings.map((setting) => (
-                            <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                            <MenuItem key={setting} onClick={handleCreatePost}>
                             <Typography textAlign="center">{setting}</Typography>
                             </MenuItem>
                         ))}
