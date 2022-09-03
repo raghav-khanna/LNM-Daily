@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: fit-content;
+    height: 80vh;
     min-width: fit-content;
 }
 
