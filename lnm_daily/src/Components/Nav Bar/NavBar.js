@@ -13,8 +13,11 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import FeedIcon from '@mui/icons-material/Feed';
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+
+    const navigate = useNavigate();
 
     const pages = ['News', 'Events', 'Clubs'];
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -30,7 +33,12 @@ const NavBar = () => {
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
+        //navigate('clubs');
     };
+
+    const handleClubsNavMenu = () => {
+        navigate('clubs');
+    }
 
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
@@ -95,7 +103,7 @@ const NavBar = () => {
                         ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <FeedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
@@ -112,13 +120,14 @@ const NavBar = () => {
                         textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        LNM DAILY
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                         <Button
                             key={page}
-                            onClick={handleCloseNavMenu}
+                            //edit here, all buttons go to clubs
+                            onClick={handleClubsNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                         >
                             {page}
