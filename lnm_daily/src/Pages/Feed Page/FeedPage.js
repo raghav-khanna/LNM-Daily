@@ -2,11 +2,15 @@ import React, { useEffect } from "react";
 import Carousel from "../../Components/Carousel/Carousel";
 import EventCard from "../../Components/Event Card/EventCard";
 import Nahargadh from "../../Assets/Nahargadh.jpg"
-import CarbonEvent from "../../Assets/CarbonEvent.jpeg"
+import DJ from "../../Assets/DJ.jpg"
 import BusinessMeet from "../../Assets/BusinessMeet.png"
 import Superheroes from "../../Assets/Superheroes.jpg"
 import "./FeedPage.css";
 import { getPost } from "../../Service/api";
+import AlignItemsList from "../../Components/Aligned List/AlignedList";
+import Roborace from "../../Assets/Roborace.jpg"
+import RoboWars from "../../Assets/RoboWars.jpg"
+import DroneRace from "../../Assets/DroneRace.jpg"
 
 const FeedPage = () => {
   useEffect(() => {
@@ -23,8 +27,8 @@ const FeedPage = () => {
       imgPath: Nahargadh,
     },
     {
-      label: "Amazon Carbon Event",
-      imgPath: CarbonEvent,
+      label: "DJ Night",
+      imgPath: DJ,
     },
     {
       label: "International Conference on Web3",
@@ -42,7 +46,10 @@ const FeedPage = () => {
         <div className="carousel">
           <Carousel imageList={images} customWidth={800} />
         </div>
-        {/*<div className="temp"></div>*/}
+        <div className="side_list">
+          <h4>Upcoming Events</h4>
+          <AlignItemsList/>
+        </div>
       </div>
 
       <div className="inline_events">
