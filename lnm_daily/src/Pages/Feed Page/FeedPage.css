@@ -24,11 +24,16 @@ body{
     margin: 1rem;
 }
 
-.temp{
-    background-color: lightyellow;
+.side_list{
     width: 15rem;
     margin: 1rem;
     border: 0.25rem solid black;
+    background-color:white;
+}
+
+.side_list > h4 {
+    border: 0.1rem black solid;
+    margin: 0.05rem;
 }
 
 .inline_events{
