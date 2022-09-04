@@ -1,0 +1,25 @@
+.parent_profile{
+    margin: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    border: 0.15rem black solid;
+    padding: 1rem;
+}
+
+.display_details{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name_n_age{
+    padding: 0.2rem;
+}
+
+.password{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 0.15rem black solid;
+}

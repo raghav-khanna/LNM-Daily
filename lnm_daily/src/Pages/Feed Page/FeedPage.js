@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import Carousel from "../../Components/Carousel/Carousel";
 import EventCard from "../../Components/Event Card/EventCard";
+import Nahargadh from "../../Assets/Nahargadh.jpg"
+import CarbonEvent from "../../Assets/CarbonEvent.jpeg"
+import BusinessMeet from "../../Assets/BusinessMeet.png"
+import Superheroes from "../../Assets/Superheroes.jpg"
 import "./FeedPage.css";
 import { getPost } from "../../Service/api";
 
@@ -15,21 +19,20 @@ const FeedPage = () => {
 
   const images = [
     {
-      label: "San Francisco – Oakland Bay Bridge, United States",
-      imgPath: "https://images.unsplash.com/photo-1537944434965-cf4679d1a598",
+      label: "Trip to Nahargadh",
+      imgPath: Nahargadh,
     },
     {
-      label: "Bird",
-      imgPath: "https://images.unsplash.com/photo-1538032746644-0212e812a9e7",
+      label: "Amazon Carbon Event",
+      imgPath: CarbonEvent,
     },
     {
-      label: "Bali, Indonesia",
-      imgPath: "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
+      label: "International Conference on Web3",
+      imgPath: BusinessMeet,
     },
     {
-      label: "Goč, Serbia",
-      imgPath:
-        "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=800&h=500&q=60",
+      label: "Superhero Cosplay",
+      imgPath: Superheroes,
     },
   ];
 

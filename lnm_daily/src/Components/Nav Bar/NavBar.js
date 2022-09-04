@@ -11,42 +11,28 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import FeedIcon from '@mui/icons-material/Feed';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import ForestIcon from '@mui/icons-material/Forest';
 
 const NavBar = () => {
 
     const navigate = useNavigate();
 
-    const pages = ['Events', 'Clubs', 'Chat'];
-    const settings = ['Profile', 'Create a Post', 'Logout'];
+    //const pages = ['Events', 'Clubs', 'Chat'];
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-        //navigate('clubs');
-    };
-
-    const handleClubsNavMenu = () => {
-        navigate('clubs');
-    }
-
-    const handleCreatePost = () => {
-        navigate('new_post');
-    }
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+    const handleOpenNavMenu = (event) => {setAnchorElNav(event.currentTarget);};
+    const handleOpenUserMenu = (event) => {setAnchorElUser(event.currentTarget);};
+    const handleCloseNavMenu = () => {setAnchorElNav(null);};
+    const handleCreatePost = () => {navigate('new_post');}
+    const handleProfile = () => {navigate("profile");}
+    const handleLogout = () => {navigate("/");}
+    const handleCloseUserMenu = () => {setAnchorElUser(null);};
+    const handleClubs = () => {navigate("clubs");}
+    const handleChat = () => {navigate("chats");}
+    const handleAbout = () => {navigate("about");}
 
     return (
         <>
@@ -80,7 +66,7 @@ const NavBar = () => {
                         onClick={handleOpenNavMenu}
                         color="inherit"
                         >
-                        <MenuIcon />
+                            <MenuIcon />
                         </IconButton>
                         <Menu
                         id="menu-appbar"
@@ -96,18 +82,22 @@ const NavBar = () => {
                         }}
                         open={Boolean(anchorElNav)}
                         onClose={handleCloseNavMenu}
-                        sx={{
-                            display: { xs: 'block', md: 'none' },
-                        }}
+                        sx={{display: { xs: 'block', md: 'none' },}}
                         >
-                        {pages.map((page) => (
-                            <MenuItem key={page} onClick={handleCloseNavMenu}>
-                            <Typography textAlign="center">{page}</Typography>
+                            <MenuItem key={"clubs"} onClick={handleClubs} >
+                                <Typography textAlign="center">{"Clubs"}</Typography>
                             </MenuItem>
-                        ))}
+                            <MenuItem key={"chat"} onClick={handleChat}>
+                                <Typography textAlign="center">{"Chats"}</Typography>
+                            </MenuItem>
+                            <MenuItem key={"about"} onClick={handleAbout}>
+                                <Typography textAlign="center">{"About"}</Typography>
+                            </MenuItem>
                         </Menu>
                     </Box>
-                    <ForestIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+
+                    <ForestIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}/>
+
                     <Typography
                         variant="h5"
                         noWrap
@@ -124,19 +114,19 @@ const NavBar = () => {
                         textDecoration: 'none',
                         }}
                     >
-                        LNM DAILY
+                        <NavLink to="/" style={{color:'white'}}>LNM DAILY</NavLink>
                     </Typography>
+
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-                        <Button
-                            key={page}
-                            //edit here, all buttons go to clubs
-                            onClick={handleClubsNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            {page}
+                        <Button key={"clubs"} onClick={handleClubs} sx={{ my: 2, color: 'white', display: 'block' }}>
+                            {"Clubs"}
                         </Button>
-                        ))}
+                        <Button key={"chat"} onClick={handleChat} sx={{ my: 2, color: 'white', display: 'block' }}>
+                            {"Chats"}
+                        </Button>
+                        <Button key={"about"} onClick={handleAbout} sx={{ my: 2, color: 'white', display: 'block' }}>
+                            {"About"}
+                        </Button>
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
@@ -161,11 +151,15 @@ const NavBar = () => {
                         open={Boolean(anchorElUser)}
                         onClose={handleCloseUserMenu}
                         >
-                        {settings.map((setting) => (
-                            <MenuItem key={setting} onClick={handleCreatePost}>
-                            <Typography textAlign="center">{setting}</Typography>
+                            <MenuItem key={"profile"} onClick={handleProfile}>
+                                <Typography textAlign="center">{"Profile"}</Typography>
                             </MenuItem>
-                        ))}
+                            <MenuItem key={"createPost"} onClick={handleCreatePost}>
+                                <Typography textAlign="center">{"Create a Post"}</Typography>
+                            </MenuItem>     
+                            <MenuItem key={"logout"} onClick={handleLogout}>
+                                <Typography textAlign="center">{"Log Out"}</Typography>
+                            </MenuItem>     
                         </Menu>
                     </Box>
                     </Toolbar>
