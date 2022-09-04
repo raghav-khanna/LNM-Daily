@@ -11,7 +11,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import FeedIcon from '@mui/icons-material/Feed';
 import { useNavigate } from "react-router-dom";
 import ForestIcon from '@mui/icons-material/Forest';
 
@@ -21,6 +20,7 @@ const NavBar = () => {
 
     const pages = ['Events', 'Clubs', 'Chat'];
     const settings = ['Profile', 'Create a Post', 'Logout'];
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -41,7 +41,21 @@ const NavBar = () => {
     }
 
     const handleCreatePost = () => {
+        console.log("Hello");
         navigate('new_post');
+        /* else if (settings === "Profile"){navigate('profile');} */
+    }
+
+    const handleMenu = (setting) => (
+        <MenuItem key={setting} onClick={
+            handleCreatePost
+        }>
+        <Typography textAlign="center">{setting}</Typography>
+        </MenuItem>
+    )
+
+    const handleProfile = () => {
+        navigate("profile");
     }
 
     const handleCloseUserMenu = () => {
@@ -161,11 +175,7 @@ const NavBar = () => {
                         open={Boolean(anchorElUser)}
                         onClose={handleCloseUserMenu}
                         >
-                        {settings.map((setting) => (
-                            <MenuItem key={setting} onClick={handleCreatePost}>
-                            <Typography textAlign="center">{setting}</Typography>
-                            </MenuItem>
-                        ))}
+                        {settings.map(handleMenu)}
                         </Menu>
                     </Box>
                     </Toolbar>

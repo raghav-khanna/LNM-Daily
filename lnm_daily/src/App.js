@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Clubs from "./Pages/Clubs/Clubs";
 import CreatePost from "./Pages/Create Post/CreatePost";
 import Footer from "./Pages/Footer/Footer";
+import Profile from "./Pages/Profile/Profile";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<FeedPage />}></Route>
           <Route path="clubs" element={<Clubs />}></Route>
           <Route path="new_post" element={<CreatePost/>}></Route>
+          <Route path="profile" element={<Profile/>}></Route>
         </Route>
         <Route path="*" element={<div><h1>Error!</h1>Change URL to /</div>}/>
       </Routes>
