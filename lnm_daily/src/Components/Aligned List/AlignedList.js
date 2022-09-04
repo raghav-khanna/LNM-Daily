@@ -7,7 +7,8 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import MediaCell from "../../Assets/MediaCell.png";
-import Quizzinga from "../../Assets/QUIZINGA.jpg"
+import Quizzinga from "../../Assets/QUIZINGA.jpg";
+import Astro from "../../Assets/Astro.jpg";
 import "./AlignedList.css"
 
 export default function AlignItemsList() {
@@ -41,7 +42,7 @@ export default function AlignItemsList() {
             <Avatar alt="Travis Howard" src= {Quizzinga}/>
             </ListItemAvatar>
             <ListItemText
-            primary=""
+            primary="Cricket Quiz"
             secondary={
                 <React.Fragment>
                 <Typography
@@ -50,9 +51,9 @@ export default function AlignItemsList() {
                     variant="body2"
                     color="text.primary"
                 >
-                    to Scott, Alex, Jennifer
+                    For Y21
                 </Typography>
-                {" — Wish I could come, but I'm out of town this…"}
+                {" — Wish to see you in large numbers…"}
                 </React.Fragment>
             }
             />
@@ -60,10 +61,10 @@ export default function AlignItemsList() {
         <Divider variant="inset" component="li" />
         <ListItem alignItems="flex-start">
             <ListItemAvatar>
-            <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+            <Avatar alt="Cindy Baker" src={Astro} />
             </ListItemAvatar>
             <ListItemText
-            primary="Oui Oui"
+            primary="Star-Gazing"
             secondary={
                 <React.Fragment>
                 <Typography
@@ -72,9 +73,9 @@ export default function AlignItemsList() {
                     variant="body2"
                     color="text.primary"
                 >
-                    Sandra Adams
+                    12th September
                 </Typography>
-                {' — Do you have Paris recommendations? Have you ever…'}
+                {' — Astro Club invites you to Library Lawn…'}
                 </React.Fragment>
             }
             />
