@@ -5,6 +5,8 @@ import Clubs from "./Pages/Clubs/Clubs";
 import CreatePost from "./Pages/Create Post/CreatePost";
 import Footer from "./Pages/Footer/Footer";
 import Profile from "./Pages/Profile/Profile";
+import Chats from "./Pages/Chats/Chats";
+import About from "./Pages/About/About";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="clubs" element={<Clubs />}></Route>
           <Route path="new_post" element={<CreatePost/>}></Route>
           <Route path="profile" element={<Profile/>}></Route>
+          <Route path="chats" element={<Chats/>}></Route>
+          <Route path="about" element={<About/>}></Route>
         </Route>
         <Route path="*" element={<div><h1>Error!</h1>Change URL to /</div>}/>
       </Routes>
