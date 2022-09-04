@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import "./CreatePost.css";
 import { addPost } from "../../Service/api";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
   const postInit = {
@@ -12,6 +13,7 @@ const CreatePost = () => {
     formlink: "",
   };
 
+  const navigate = useNavigate();
   const [post, setPost] = useState(postInit);
 
   const postDetails = (e) => {
@@ -20,6 +22,7 @@ const CreatePost = () => {
 
   const addPostDetails = async () => {
     await addPost(post);
+    navigate("/");
   };
 
   return (
@@ -74,7 +77,14 @@ const CreatePost = () => {
       <div>
         <Button variant="outlined" component="label" className="btn">
           Upload
-          <input hidden accept="image/*" multiple type="file" />
+          <input
+            hidden
+            accept="image/*"
+            type="file"
+            onChange={(e) => {
+              postDetails(e);
+            }}
+          />
         </Button>
         <Button
           variant="contained"

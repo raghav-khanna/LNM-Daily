@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "../../Components/Carousel/Carousel";
 import EventCard from "../../Components/Event Card/EventCard";
-import Nahargadh from "../../Assets/Nahargadh.jpg"
-import CarbonEvent from "../../Assets/CarbonEvent.jpeg"
-import BusinessMeet from "../../Assets/BusinessMeet.png"
-import Superheroes from "../../Assets/Superheroes.jpg"
+import Nahargadh from "../../Assets/Nahargadh.jpg";
+import CarbonEvent from "../../Assets/CarbonEvent.jpeg";
+import BusinessMeet from "../../Assets/BusinessMeet.png";
+import Superheroes from "../../Assets/Superheroes.jpg";
 import "./FeedPage.css";
 import { getPost } from "../../Service/api";
 
@@ -13,8 +13,10 @@ const FeedPage = () => {
     getAllPosts();
   }, []);
 
+  const [posts, setPosts] = useState([]);
+
   const getAllPosts = async () => {
-    getPost().then((res) => console.log(res.data.rows));
+    getPost().then((res) => setPosts(res.data.rows));
   };
 
   const images = [
@@ -44,8 +46,19 @@ const FeedPage = () => {
         </div>
         {/*<div className="temp"></div>*/}
       </div>
-
       <div className="inline_events">
+        {posts.map((post, index) => (
+          <EventCard
+            imagePath={images[index].imgPath}
+            briefDetail={post.summary}
+            fullDetails={post.details}
+            eventName={post.title}
+            isRegister={post.formlink === "" ? false : true}
+          />
+        ))}
+      </div>
+
+      {/* <div className="inline_events">
         <EventCard
           imagePath={
             "https://images.unsplash.com/photo-1538032746644-0212e812a9e7"
@@ -82,9 +95,9 @@ const FeedPage = () => {
           }
           eventName={"Event Name"}
         />
-      </div>
+      </div> */}
 
-      <div className="inline_events">
+      {/* <div className="inline_events">
         <EventCard
           imagePath={
             "https://images.unsplash.com/photo-1537944434965-cf4679d1a598"
@@ -121,7 +134,7 @@ const FeedPage = () => {
           }
           eventName={"Event Name"}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

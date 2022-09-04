@@ -6,9 +6,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import PopUp from "../PopUp";
-import "./EventCard.css"
+import "./EventCard.css";
 
-const EventCard = ({ eventName, briefDetail, fullDetails, imagePath }) => {
+const EventCard = ({
+  eventName,
+  briefDetail,
+  fullDetails,
+  imagePath,
+  isRegister = true,
+}) => {
   const [show, setShow] = React.useState(false);
 
   const showPopUp = () => {
@@ -44,7 +50,7 @@ const EventCard = ({ eventName, briefDetail, fullDetails, imagePath }) => {
           <PopUp
             EventName={eventName}
             EventDetails={fullDetails}
-            isRegister={true}
+            isRegister={isRegister}
           />
         </CardActions>
       </Card>
