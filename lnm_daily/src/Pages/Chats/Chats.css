@@ -1,22 +1,21 @@
-.parent_chats{
-    background-color: #e6ffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    min-width: fit-content;
+.parent_chats {
+  background-color: #e6ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  min-width: fit-content;
 }
 .upcoming {
-    transform: rotate(-25deg);
-    padding: 4rem 8rem;
-    display: inline-block;
-    border: 3px solid #333333;
-    font-size: 1.9rem;
-    border-radius: 10%;
-    text-transform: uppercase;
-    letter-spacing: 0.25rem;
-    position: relative;
-    color: darkgoldenrod;
-    
+  transform: rotate(-25deg);
+  padding: 4rem 8rem;
+  display: inline-block;
+  border: 3px solid #333333;
+  font-size: 1.8rem;
+  border-radius: 10%;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  position: relative;
+  color: darkgoldenrod;
 }

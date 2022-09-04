@@ -3,14 +3,13 @@ import Carousel from "../../Components/Carousel/Carousel";
 import EventCard from "../../Components/Event Card/EventCard";
 import Nahargadh from "../../Assets/Nahargadh.jpg";
 import DJ from "../../Assets/DJ.jpg";
-import BusinessMeet from "../../Assets/BusinessMeet.png";
 import Superheroes from "../../Assets/Superheroes.jpg";
 import "./FeedPage.css";
 import { getPost } from "../../Service/api";
 import AlignItemsList from "../../Components/Aligned List/AlignedList";
 import Roborace from "../../Assets/Roborace.jpg";
-import RoboWars from "../../Assets/RoboWars.jpg";
 import DroneRace from "../../Assets/DroneRace.jpg";
+import BusinessMeet from "../../Assets/BusinessMeet.jpg";
 
 const FeedPage = () => {
   useEffect(() => {
@@ -33,12 +32,20 @@ const FeedPage = () => {
       imgPath: DJ,
     },
     {
-      label: "International Conference on Web3",
-      imgPath: BusinessMeet,
-    },
-    {
       label: "Superhero Cosplay",
       imgPath: Superheroes,
+    },
+    {
+      label: "Robo-racing Competition",
+      imgPath: Roborace,
+    },
+    {
+      label: "Drone Race Competition",
+      imgPath: DroneRace,
+    },
+    {
+      label: "Meetings Scheduled by Clubs",
+      imgPath: BusinessMeet,
     },
   ];
 
@@ -64,84 +71,6 @@ const FeedPage = () => {
           />
         ))}
       </div>
-
-      {/* <div className="inline_events">
-        <EventCard
-          imagePath={
-            "https://images.unsplash.com/photo-1538032746644-0212e812a9e7"
-          }
-          briefDetail={
-            "This is just brief detail of the event and what is it about and when it will happend"
-          }
-          fullDetails={
-            "This is just brief detail of the event and what is it about and when it will happend. This is now full detail of the event and hence it can also be registered into. Please click on the Register button below to register for the event"
-          }
-          eventName={"Event Name"}
-        />
-        <EventCard
-          imagePath={
-            "https://images.unsplash.com/photo-1537996194471-e657df975ab4"
-          }
-          briefDetail={
-            "This is just brief detail of the event and what is it about and when it will happend"
-          }
-          fullDetails={
-            "This is just brief detail of the event and what is it about and when it will happend. This is now full detail of the event and hence it can also be registered into. Please click on the Register button below to register for the event"
-          }
-          eventName={"Event Name"}
-        />
-        <EventCard
-          imagePath={
-            "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60"
-          }
-          briefDetail={
-            "This is just brief detail of the event and what is it about and when it will happend"
-          }
-          fullDetails={
-            "This is just brief detail of the event and what is it about and when it will happend. This is now full detail of the event and hence it can also be registered into. Please click on the Register button below to register for the event"
-          }
-          eventName={"Event Name"}
-        />
-      </div> */}
-
-      {/* <div className="inline_events">
-        <EventCard
-          imagePath={
-            "https://images.unsplash.com/photo-1537944434965-cf4679d1a598"
-          }
-          briefDetail={
-            "This is just brief detail of the event and what is it about and when it will happend"
-          }
-          fullDetails={
-            "This is just brief detail of the event and what is it about and when it will happend. This is now full detail of the event and hence it can also be registered into. Please click on the Register button below to register for the event"
-          }
-          eventName={"Event Name"}
-        />
-        <EventCard
-          imagePath={
-            "https://images.unsplash.com/photo-1537996194471-e657df975ab4"
-          }
-          briefDetail={
-            "This is just brief detail of the event and what is it about and when it will happend"
-          }
-          fullDetails={
-            "This is just brief detail of the event and what is it about and when it will happend. This is now full detail of the event and hence it can also be registered into. Please click on the Register button below to register for the event"
-          }
-          eventName={"Event Name"}
-        />
-        <EventCard
-          imagePath={
-            "https://images.unsplash.com/photo-1538032746644-0212e812a9e7"
-          }
-          briefDetail={
-            "This is just brief detail of the event and what is it about and when it will happend"
-          }
-          fullDetails={
-            "This is just brief detail of the event and what is it about and when it will happend. This is now full detail of the event and hence it can also be registered into. Please click on the Register button below to register for the event"
-          }
-          eventName={"Event Name"}
-        />
-      </div> */}
     </div>
   );
 };

@@ -1,4 +1,5 @@
-.event_tile{
-    border: 0.25rem solid black;
-    margin: 0.5rem;
+.event_tile {
+  border: 0.25rem solid black;
+  padding: 0rem;
+  margin: 1rem;
 }

@@ -1,20 +1,21 @@
-.parent_about{
-    background-color: #e6ffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    min-width: fit-content;
+.parent_about {
+  background-color: #e6ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  min-width: fit-content;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-    border: 0.2rem black solid;
-    padding: 1rem;
-    width: 90%;
-    height: fit-content;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  border: 0.2rem black solid;
+  padding: 1rem;
+  width: 90%;
+  height: fit-content;
+  background: linear-gradient(to bottom, #e6ffff 0%, #8f6de6 100%);
 }

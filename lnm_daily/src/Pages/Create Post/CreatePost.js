@@ -3,7 +3,7 @@ import { Button, TextField } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import "./CreatePost.css";
 import { addPost } from "../../Service/api";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
   const postInit = {
@@ -13,7 +13,7 @@ const CreatePost = () => {
     formlink: "",
   };
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [post, setPost] = useState(postInit);
 
   const postDetails = (e) => {
@@ -22,12 +22,12 @@ const CreatePost = () => {
 
   const addPostDetails = async () => {
     await addPost(post);
-    navigate("/");
+    // navigate("/");
   };
 
   return (
     <div className="parent_createpost">
-      <h1> So what's going on </h1>
+      <h1> NEW EVENT ANNOUNCEMENT </h1>
       <hr />
       <div className="input_list">
         <TextField
