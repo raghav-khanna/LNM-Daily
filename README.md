@@ -12,9 +12,9 @@ LNM Daily's purpose is two-fold.
 ### Idea Overview
 The primary features of our website are:-
 
-###### 1. Constantly updating feed for new announcements of new events.
-###### 2. Information on the clubs and groups that are active in the university.
-###### 3. Chat sub-system to connect with like-minded people.
-###### 4. Ability to register for events directly through the website.
-###### 5. Ability to create events individually after creating an account on the website.
-###### 6. Recieving personalised feed based on the user's likes and interests
+1. Constantly updating feed for new announcements of new events.
+2. Information on the clubs and groups that are active in the university.
+3. Chat sub-system to connect with like-minded people.
+4. Ability to register for events directly through the website.
+5. Ability to create events individually after creating an account on the website.
+6. Recieving personalised feed based on the user's likes and interests
